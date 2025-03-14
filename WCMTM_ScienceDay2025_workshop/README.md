@@ -1,0 +1,1 @@
+Simple image segmentation using thresholding. The notebook is written to run in colab.
