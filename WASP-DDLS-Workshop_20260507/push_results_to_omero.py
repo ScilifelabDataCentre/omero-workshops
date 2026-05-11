@@ -50,7 +50,7 @@ def attach_files_to_images(conn, matched_pairs, results_dir: Path):
             mimetype = "image/tiff" if fpath.suffix == ".tiff" else "text/csv"
             print(f"  {img_name} <- {fpath.name} ... ", end="", flush=True)
             ann = conn.createFileAnnfromLocalFile(
-                str(fpath), mimetype=mimetype, ns=args.namespace)
+                str(fpath), mimetype=mimetype, ns=NAMESPACE)
             img.linkAnnotation(ann)
             print("done")
 
@@ -61,7 +61,7 @@ def attach_summary_to_dataset(conn, dataset, results_dir: Path):
     if summary.exists():
         print(f"  Attaching summary.csv to dataset ... ", end="", flush=True)
         ann = conn.createFileAnnfromLocalFile(
-            str(summary), mimetype="text/csv", ns=args.namespace)
+            str(summary), mimetype="text/csv", ns=NAMESPACE)
         dataset.linkAnnotation(ann)
         print("done")
 
@@ -140,6 +140,9 @@ def main():
     if not args.results_dir.exists():
         print(f"ERROR: Results directory not found: {args.results_dir}")
         return
+    
+    if args.namespace:
+        NAMESPACE = args.namespace
 
     conn = omero_connect(host=args.host, port=args.port)
     try:

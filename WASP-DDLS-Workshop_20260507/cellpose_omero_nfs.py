@@ -96,12 +96,12 @@ def load_image(pair: dict) -> np.ndarray:
     """Load image from NFS pair dict. Returns (Y, X, 2) or (Y, X) array."""
     nuc = imread(str(pair["nuclei"]))
     if nuc.ndim == 3:
-        nuc = nuc[..., 0] if nuc.shape[2] <= 4 else nuc[0]
+        nuc = nuc.max(axis=-1) if nuc.shape[2] <= 4 else nuc[0]
 
     if pair["body"] is not None:
         body = imread(str(pair["body"]))
         if body.ndim == 3:
-            body = body[..., 0] if body.shape[2] <= 4 else body[0]
+            body = body.max(axis=-1) if body.shape[2] <= 4 else body[0]
         return np.stack([body, nuc], axis=-1)
 
     return nuc
