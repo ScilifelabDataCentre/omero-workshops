@@ -118,7 +118,7 @@ python omero_import.py \
 ```bash
 python cellpose_omero_nfs.py \
     --dataset-id <dataset-id> \
-    --output-dir results/omero_nfs
+    --output-dir <results-dir>
 ```
 
 **Via SLURM:**
@@ -127,7 +127,7 @@ Edit the placeholder values in `slurm_job.sh` (account, reservation, paths),
 then submit:
 
 ```bash
-sbatch slurm_job.sh <dataset-id> results/omero_nfs
+sbatch slurm_job.sh <dataset-id> <results-dir>
 ```
 
 This resolves image file paths from OMERO, reads them directly off the NFS
@@ -142,7 +142,7 @@ images:
 ```bash
 python push_results_to_omero.py \
     --dataset-id <dataset-id> \
-    --results-dir results/omero_nfs
+    --results-dir <results-dir>
 ```
 
 Add `--skip-rois` to skip ROI contour upload (faster if you only need file
