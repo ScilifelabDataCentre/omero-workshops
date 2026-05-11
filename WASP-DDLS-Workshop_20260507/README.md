@@ -95,7 +95,14 @@ On ALVIS, load the required modules first:
 module load GCC/12.3.0 CUDA/12.1.1 Python/3.11.3-GCCcore-12.3.0 Java/11.0.27
 ```
 
-### 2. Import images into OMERO
+### 2. Download and Import images into OMERO
+
+Download the BBBC020 dataset from the Broad Institute:
+
+```bash
+wget https://data.broadinstitute.org/bbbc/BBBC020/BBBC020_v1_images.zip
+unzip BBBC020_v1_images.zip
+```
 
 Upload local images to the OMERO server as a new Dataset:
 
