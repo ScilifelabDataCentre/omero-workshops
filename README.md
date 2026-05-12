@@ -1,6 +1,6 @@
 # SciLifeLab OMERO workshops
 
-Workshop material related to [SciLifeLab OMERO](https://omero.scilifelab.se).
+Workshop material related to **SciLifeLab OMERO**.
 
 ## Workshops
 
