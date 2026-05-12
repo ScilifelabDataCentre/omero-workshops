@@ -1,0 +1,10 @@
+cellpose>=3.0
+tifffile
+scikit-image
+pandas
+numpy
+zarr
+matplotlib
+jupyterlab
+ezomero
+platformdirs
