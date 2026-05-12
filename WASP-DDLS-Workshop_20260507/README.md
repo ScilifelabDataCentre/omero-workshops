@@ -1,6 +1,6 @@
 # From Microscope to GPU: Bioimage Analysis with Cellpose
 
-**WASP/DDLS Workshop — 7 May 2026**
+**This workshop was presented at the _Research Opportunities at the Intersection of Society, Life Sciences, and Technology_ conference, May 7th – 8th 2026, at Uppsala Konferens & Kongress, Uppsala, Sweden. It was led by Sonja Mathias, Gökhan Öszari, and Otoniel Maya, from SciLifeLab Data Centre. — 7 May 2026**
 
 End-to-end bioimage analysis pipeline: access a public microscopy dataset,
 run GPU-accelerated cell segmentation with [Cellpose](https://cellpose.readthedocs.io),
@@ -181,7 +181,8 @@ Kontrolle (untreated control).
 
 | Resource | Link |
 |----------|------|
-| SciLifeLab OMERO | https://omero.scilifelab.se |
+| SciLifeLab OMERO prototype login page | https://omero.scilifelab.se |
 | OMERO documentation | https://omero.readthedocs.io |
 | Cellpose documentation | https://cellpose.readthedocs.io |
 | BBBC020 dataset | https://bbbc.broadinstitute.org/BBBC020 |
+_Note:_ in order to be able to log in to the SciLifeLab OMERO prototype service, access needs to be granted. 
